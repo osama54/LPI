@@ -78,6 +78,10 @@ history -c| clear history list
 ##### ex: type uname: " uname is hashed " that mean the uname used recently and is cashed in the memory
 ##### use which to find the 
 
+---
+---
+---
+
 
 
 
