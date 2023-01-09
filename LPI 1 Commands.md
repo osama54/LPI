@@ -136,18 +136,46 @@ md5sum /var/log/syslog.2.gz|give me hash value using MD5
 sha256sum /var/log/syslog.2.gz|give me hash value using sha 256 
 sha512sum /var/log/syslog.2.gz|give me hash value using sha 512
 
+---
+---
+---
 
+# Part 4 
 
+Commands|Detail
+---|---
+sot world.txt|
+sort file.txt|sort a text file alphabetically 
+sort -n numbers.txt|sort file numerically (just sort no change for the original file)
+paste alpha.txt numbers.txt| combine files in sibe-by-side format
+split -l 2 alpha.txt| split the file to multiple files each one contain only two lines from the original file ( the new file name is xaa, xab, xac)
+split -l 2 alpha.txt NewFile|Change the file name exported to Newfileaa, Newfileab, Newfileac
+cut| cut out sections of a specified file ( does not change the original file )
+cut -d : f7|seperate fields in record, -f which field of each record to view 
+cut -c1-10 /etc/passwd|pull out charachters one to 10 of each record
+#### paste put alpha.txt in first column and numbers.txt in the second column
 
+---
 
+Commands|Detail
+---|---
+tr : $ < /etc/passwd| : it is the character that i want to change, $ the new value ( tr doesn't change the actual file) 
+od /etc/passwd|display files in octal code as well as other formats (useful for display binary code)
+od -A x -t x1z -v /bin/cat|Get binary program displayed in hexadecimal
+sed 's/chocolate/strawberry/' food.txt|replace only first line contain chocolate with strawberry in the food.txt file
+sed 's/chocolate/strawberry/g' food.txt|Change all chocoloate words, g:global
 
+### sed: is Fast becuase it reads a file a line at a time and makes the desired changes to each line
 
+---
 
-
-
-
-
-
+Commands|Detail
+---|---
+grep root /etc/passwd|search word root in /etc/passwd (show root in red )
+grep --color=never root /etc/passwd|Show root without color
+grep -i ROOT /etc/passwd|For case insensitive search
+grep -i ^ROOT /etc/passwd|search word at the begining in the line
+grep -i ROOT$ /etc/passwd|search word at the end in the line
 
 
 
