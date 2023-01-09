@@ -82,28 +82,59 @@ history -c| clear history list
 ---
 ---
 
+# Part 3 
+Commands|Detail
+---|---|
+ls -a|Show all hiden files in the directory
+ls -f|Few file indicator, /=directory,  * executable file, @=symbolic linc
+ls -l|Provide the detail files
+ls -alF|Well see all files information, all hidden files, classification indicatiors
+cat /proc/version|Contain kernal information like uname -r
+cat /etc/passwd|show passwd 
+head /etc/passwd|show only the head of the passwd file ( first 10 line )
+head -2 /etc/passwd|show only first two line 
+tail /etc/passwd|show the last 10 lines of the passwd file
+tail -2 /etc/passwd|show the last 2 lines os passwd file 
+tail -f /var/log/secure|show the last message of the log file and then display any new messages come in (Press Ctrl+c to stop process)
 
+---
+Commands|Detail
+---|---|
+cat /var/log/boot.log or /var/log/kern.log|Display boot log
+more /var/log/boot.log|Show only one page, and use space and enter to view more
+less /var/log/boot.log|same as more but we can use page down and page up to change between pages and also can search in file by press /typesomething and press enter 
+wc|show the number of .lines, word, and bytes in the text file 
+wc -l|show only the lines in the text file
+wc -w|For number of words 
+wc -c|for number of bytes 
+unic word.txt|show only the unique lines not dublicate lines 
+uniq -c|the the number of time that line occurs (dublicated)
+uniq -d|ony prints the duplicate lines one time
+uniq -D|ony prints the duplicate lines all time 
+touch work.txt|craete text file 
+echo "hello" > word.txt|insert hello to word file 
+echo "world" >> word.txt
+nl /etc/passwd|it just give each line number (Did not number the blank lines) see only the number associated with number lines 
 
+#### for uniq command the lines must be next each other to know it is duplicate. 
+                  hello
+                  world
+                  world
+                  world
+                  hello
+in above example the uniq -D will show only the world is duplicated 
 
+--- 
+### A hash is A fixed-length string of letters and numbers also called 
+###### *Hash value *Fingerprint *Signature *Message digest 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Commands|Detail
+---|---|
+ls /var/log|folder contain the log files 
+cp /var/log/syslog.2.gz .|dot . meaning copy the file to my current location 
+md5sum /var/log/syslog.2.gz|give me hash value using MD5
+sha256sum /var/log/syslog.2.gz|give me hash value using sha 256 
+sha512sum /var/log/syslog.2.gz|give me hash value using sha 512
 
 
 
