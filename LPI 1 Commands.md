@@ -190,14 +190,15 @@ sort alpha.txt > newAlpha.txt|Sort alpha file and save result to newAlpha.txt (S
 grep --color==never bash$ /etc/passwd > keepSearch.txt|Save grep output to keepSearch
 sort alpha.txt >> newAlpha.txt|use double >> to add the file to end of newAlpha.txt, if use onle one > the previous txt will removed. 
 grep nologin$ /etc/passwd \| wc -l|word count word for nologin
-cut -d: -f1,7 /etc/passwd \| sort \| tee data.txt \| less
+cut -d: -f1,7 /etc/passwd \| sort \| tee data.txt \| less|cut and sort, and put the result in data.tx and view it in less. 
 tee|Directing STDOUT to two different location
 
 ### Redirection: is the ability to change the method to SEND or RECEIVE text from the default method. 
-#### STDIN: Standard input
+#### STDIN: Standard Input
 #### STDOUT: Standard Output
-
-
+#### STDERR: Standard Error
+\>|Creates a new file or overwrites file contents with STDOUT
+\>|Appends STDOUT to a file (but will create the file, if it does not exist) 
 
 
 
