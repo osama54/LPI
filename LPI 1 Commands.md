@@ -197,8 +197,8 @@ tee|Directing STDOUT to two different location
 #### STDIN: Standard Input
 #### STDOUT: Standard Output
 #### STDERR: Standard Error
-\>|Creates a new file or overwrites file contents with STDOUT
-\>|Appends STDOUT to a file (but will create the file, if it does not exist) 
+##### \>Creates a new file or overwrites file contents with STDOUT
+##### \>>Appends STDOUT to a file (but will create the file, if it does not exist) 
 
 
 
