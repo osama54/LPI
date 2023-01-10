@@ -192,17 +192,32 @@ sort alpha.txt >> newAlpha.txt|use double >> to add the file to end of newAlpha.
 grep nologin$ /etc/passwd \| wc -l|word count word for nologin
 cut -d: -f1,7 /etc/passwd \| sort \| tee data.txt \| less|cut and sort, and put the result in data.tx and view it in less. 
 tee|Directing STDOUT to two different location
+ls /etc/PASSWORD 2> error.txt|nothin will display, 2 meaning the error will redirected to error.txt file 
+grep --color=never HOST /etc/*.* 2> /dev/null|Search through all the files within top level etc directory, /dev/null called blackhole (what does in doesn't back out)
 
 ### Redirection: is the ability to change the method to SEND or RECEIVE text from the default method. 
 #### STDIN: Standard Input
 #### STDOUT: Standard Output
 #### STDERR: Standard Error
-##### \>Creates a new file or overwrites file contents with STDOUT
-##### \>>Appends STDOUT to a file (but will create the file, if it does not exist) 
+##### \2>Creates a new file or overwrites file contents with STDOUT
+##### \2>>Appends STDOUT to a file (but will create the file, if it does not exist) 
+##### The < symbol will redirect STDIN, such as the tr command requires. Objective 
+##### The > symbol redirect STDOUT and create a new file (or overwrite the contents of a pre-existing file) with the output
+##### The >> symbol redirect STDOUT and append the output to a file
+##### STDERR is represented by 2, which is its file descriptor. Thus, to redirect STDERR, you use the 2 along with the direction symbol (example: 2> filea.txt) 
 
+---
 
+Commands|Detail
+---|---
+ls test.txt | xargs rm|remove the file
+ls test.txt | xargs -o rm -i
+grep $(cat test.txt) /etc/passwd|search for the words in the text.txt in the file passwd
+grep "$(cat test.txt) /etc/passwd|same output above
+grep \`cat test.txt\` /etc/password|same output above 
 
-
+#### The xargs command builds and executes commands provided through the standard input. It takes the input and converts it into a command argument for another command. This feature is particularly useful in file management, where xargs is used in combination with rm , cp , mkdir , and other similar commands.
+##### The | symbol (called “pipe”) redirects STDOUT the STDOUT of one command as the STDIN of another command
 
 
 
