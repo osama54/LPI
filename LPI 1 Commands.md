@@ -189,8 +189,8 @@ tr n N < /etc/passwd|Change all lower case n to upper case N
 sort alpha.txt > newAlpha.txt|Sort alpha file and save result to newAlpha.txt (Sort doens't change the original file) 
 grep --color==never bash$ /etc/passwd > keepSearch.txt|Save grep output to keepSearch
 sort alpha.txt >> newAlpha.txt|use double >> to add the file to end of newAlpha.txt, if use onle one > the previous txt will removed. 
-grep nologin$ /etc/passwd /| wc -l|word count word for nologin
-cut -d: -f1,7 /etc/passwd /| sort /| tee data.txt /| less
+grep nologin$ /etc/passwd \| wc -l|word count word for nologin
+cut -d: -f1,7 /etc/passwd \| sort \| tee data.txt \| less
 tee|Directing STDOUT to two different location
 
 ### Redirection: is the ability to change the method to SEND or RECEIVE text from the default method. 
