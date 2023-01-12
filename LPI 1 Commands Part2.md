@@ -54,13 +54,15 @@ whereis type| cannot find information becuase type is built in bash shell
 man -k which \| grep ^whreis \| tee -a studyme.txt| -k: find a kewword in man of command, -a: append result
 locate word.txt|locate the file location
 sudo updatedb|update the mlocate.db database
-find / -name newword.txt 2> /dev/null | Find is flexible and faster than locate, / start searching at the start point and locate for all sub directories, if we put just / that meaning start from root and search all directories. 
+find / -name newword.txt 2> /dev/null | Find is flexible, / start searching at the start point and locate for all sub directories, if we put just / that meaning start from root and search all directories. 
 find /home -name newword.txt 2> /dev/null| search in home directory
 find /home -regex .\*word.txt|Match zero or on. 
 find /etc -maxdepth 1 -name passwd| -maxdepth 1 search only in the directory and not the sub directories. 
 
 #### File globbing| is when a file name is expanded in multiple file names that contain original file name
 #### mlocate.db is the database the locate use to search, it is typically only updated on a daily basis ( i could't find file that just created ) so we need to use command sudo updatedb to update the database 
+#### The whereis command will display files associated with a program, such as its man pages and its binary file, as well as any source file and info files
+#### The locate command uses a database with file names to perform searches, making it fast than find. If the database is out-of-date, you’ll need to use the updatedb command and super user privileges to get it updated
 
 ### find search options
 Command|Detail
@@ -75,7 +77,7 @@ Command|Detail
 -size file-size|Locates files with a size of file-size
 -user username|Searches for files owned by username
 
-
+##### regex(7) is another reference to the basic regular expression (BRE) term. It is derived from the fact that the man pages in the Linux Programmer
 
 
 
