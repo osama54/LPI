@@ -79,16 +79,61 @@ Command|Detail
 
 ##### regex(7) is another reference to the basic regular expression (BRE) term. It is derived from the fact that the man pages in the Linux Programmer
 
+---
+---
+---
 
+Command|Detail
+---|---|
+ls -d /etc/|To see a directory's information, but not its contents
+ls -d /etc/\*|will show me all the files and subdirectories, however, becuase use -d, it won't show any subdirectory contents
+ls -d /etc/net\*|Find files or subdirectories whose name starts with net
+ls -d /etc/\*net\*|find any files contain net 
+ls -d /etc/network?|The question mark ? willdcard will match any characters in one charachter position 
+ls -d /etc/liba\[os]\*|look for any files or subdirectory name that starts with liba and then has either o or u charachter, and then anythin after that
+ls -d /etc/lib?\[a-z]\*| look for range or charachter 
+file /etc/updatedb.conf| Determine a file's type 
 
+#### File globbing| is when a file name is expanded in multiple file names that contain original file name. This occurs when you use wildcards. 
 
+---
 
+Command|Detail
+---|---|
+stat hello.txt|we can see the last access date, modification date, and change date 
+touch hello.txt|if we need to update all the timestamps ^ we use touch for that 
+touch -m hello.txt|only modification time changes
+rm hello.txt|remove file without any information 
+rm -i hello.txt|will ask me before delete the file
+rm -vi hello.txt|will ask me before delete the file and tell me the file is removed
+rm -i \*.txt|Delete all files with .txt  
+rm -i $(ls \*.txt)|same result us upper ^
 
+---
 
+Command|Detail
+---|---|
+cp hello.txt newhello.text|copy the file to the new name 
+cp hello.txt Documents/newhello.txt| copy file to new directory
+mv hello.txt Documents/| move file to new directory
+mv newhello.txt Document/hello2.txt|move and change the file name 
+mv -i hello2.txt Documents/|if find tha file with same name in destination, will ask me before do that 
 
+---
 
+Command|Detail
+---|---|
+ls -F|list the subdirectory in current directory 
+mkdir Exam|create Exam directory
+ls -dl Exam|give me a deal of information 
+mkdir -p Study/Cert|cannot create parent directory without -p 
+ls -FR|lock for all subdirectory
+rmdir Directory/
+ls -R Test|see diirectory tree all files
+rm -iR|Use either -r or -R on rm to remove files in directory tree| 
 
-
+#### Child directory is another name for a Subdirectory
+#### Mkdir remove only empty directory, rm -R temove files in any directory tree
 
 
 
