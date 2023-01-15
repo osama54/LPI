@@ -83,6 +83,8 @@ Command|Detail
 ---
 ---
 
+# Part 7 
+
 Command|Detail
 ---|---|
 ls -d /etc/|To see a directory's information, but not its contents
